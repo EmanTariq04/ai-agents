@@ -47,11 +47,26 @@ const toggleTheme = () => {
     : "fa-solid fa-moon";
 };
 
-const createImageCards = (selectedModel, imageCount, aspectRatio, promptText) => {
-    for (let i = 0; i < imageCount; i++) {
-        
-    }
-}
+const createImageCards = (
+  selectedModel,
+  imageCount,
+  aspectRatio,
+  promptText
+) => {
+    gridGallery.innerHTML = ""
+
+
+  for (let i = 0; i < imageCount; i++) {
+    gridGallery.innerHTML += ` <div class="img-card loading" id="img-card-${i}" style="aspect-ratio: ${aspectRatio}">
+                <div class="status-container">
+                    <div class="spinner"></div>
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <p class="status-text">Generating...</p>
+                </div>
+                <img src="./random.png" class="result-img" />
+                </div>`;
+  }
+};
 
 const handleFormSubmit = (e) => {
   e.preventDefault();
