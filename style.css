@@ -16,7 +16,7 @@ body {
 }
 
 .chatbot-popup {
-    position: relative;
+  position: relative;
   width: 420px;
   background: #fff;
   overflow: hidden;
@@ -173,7 +173,7 @@ body {
 .chat-footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 90%;
     background: #fff;
     padding: 15px 22px 20px;
 }
@@ -221,4 +221,22 @@ body {
     background: #f1f1ff;
     border-radius: 50%;
     transition: 0.2s ease;
+}
+
+.chat-form .chat-controls #send-message {
+    color: #fff;
+    display: none;
+    background: #5350C4;
+}
+
+.chat-form .message-input:valid~.chat-controls #send-message {
+    display: block;
+}
+
+.chat-form .chat-controls #send-message:hover {
+    background: #5350C4;
+}
+
+.chat-form .chat-controls button:hover {
+    background-color: #f1f1ff;
 }
